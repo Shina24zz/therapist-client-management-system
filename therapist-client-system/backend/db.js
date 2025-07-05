@@ -1,12 +1,17 @@
 // backend/db.js
 const mysql = require('mysql2');
 
+const mysql = require('mysql2');
+
 const connection = mysql.createConnection({
-  host: 'webcourse.cs.nuim.ie',
-  user: 'u240306',
-  password: 'aGhu4mae7HeiYap2',
-  database: 'cs230_u240306'
+  host: 'your-db-host',
+  user: 'your-db-user',
+  password: 'your-db-password',
+  database: 'your-db-name'
 });
+
+module.exports = connection;
+
 
 connection.connect((err) => {
   if (err) {
